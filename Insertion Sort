@@ -1,0 +1,38 @@
+import java.io.*;
+import java.util.*; 
+
+public class InsertionSort 
+{
+    
+    public static void main(String args[]) 
+    {
+       Scanner sc=new Scanner(System.in);
+
+       int T=sc.nextInt();
+       int[] arr=new int[T];
+
+
+	    for(int i=0;i<T;i++)
+	      {
+	        arr[i]=sc.nextInt();
+	      }
+	    int temp=0;
+	    for(int i=1;i<T;i++)
+	      {   
+	        temp=arr[i];
+	        int j=i-1;
+ 	        while(j>=0 && arr[j]>temp)
+ 	          {
+ 	            arr[j+1]=arr[j];
+ 	            j=j-1;
+ 	            arr[j+1]=temp;
+ 	          }
+ 	       }
+	    for(int i=0;i<T;i++)
+	      {
+	        System.out.println(arr[i]);
+	      }
+
+ 
+     }
+}
